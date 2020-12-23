@@ -1,10 +1,10 @@
 # Persistence Cycles
 
-<img src="./figures/pd_full.png" alt="drawing" height="120"/>
-<img src="./figures/pairs_1perc.png" alt="drawing" height="120"/>
-<img src="./figures/cycles.png" alt="drawing" height="120"/>
-<img src="./figures/first_hurricane_cycles_zoom.png" alt="drawing" height="120"/>
-<img src="./figures/full2-cycles-1perc.png" alt="drawing" height="120"/>
+<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pd_full.jpg" alt="drawing" height="120"/>
+<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pairs_1perc.jpg" alt="drawing" height="120"/>
+<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/cycles.jpg" alt="drawing" height="120"/>
+<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="120"/>
+<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/full2-cycles-1perc.jpg" alt="drawing" height="120"/>
 
 
 
@@ -77,7 +77,7 @@ Here we describe how to interact with the user interface in Paraview in order to
 
 ### Output
 
-![interface](./figures/outputs.png)
+![interface](https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/outputs.jpg)
 
 `FG_PersistentHomology` produces seven outputs. If you are not familiar with persistent homology, we suggest reading our [paper]() before continuing reading. The outputs produced by the plugin are:
 
@@ -99,7 +99,7 @@ Here we describe how to interact with the user interface in Paraview in order to
 
 ### Interface
 
-![interface](./figures/interface.png)
+![interface](https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/interface.jpg)
 
 Extraction of 1-cycles/2-cycles and 1-holes/2-holes is disabled by default and can be activated from the properties panel by clicking on the corresponding checkbox.
 
