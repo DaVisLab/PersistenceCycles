@@ -1,10 +1,6 @@
 # Persistence Cycles
 
-<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pd_full.jpg" alt="drawing" height="120"/>
-<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pairs_1perc.jpg" alt="drawing" height="120"/>
-<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/cycles.jpg" alt="drawing" height="120"/>
-<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="120"/>
-<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/full2-cycles-1perc.jpg" alt="drawing" height="120"/>
+<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pd_full.jpg" alt="drawing" height="120"/> <img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pairs_1perc.jpg" alt="drawing" height="120"/> <img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/cycles.jpg" alt="drawing" height="120"/> <img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="120"/> <img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/full2-cycles-1perc.jpg" alt="drawing" height="120"/>
 
 
 
