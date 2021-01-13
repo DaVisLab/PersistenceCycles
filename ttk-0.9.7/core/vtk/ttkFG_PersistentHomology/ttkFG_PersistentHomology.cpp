@@ -113,7 +113,7 @@ void ttkFG_PersistentHomology::outPersistencePairs(vtkDataArray *inputScalarFiel
 
     vtkSmartPointer<vtkDoubleArray> step=vtkSmartPointer<vtkDoubleArray>::New();
     step->SetNumberOfComponents(1);
-    step->SetName("Filtration value vertex");
+    step->SetName("Filtration");
 
     //Embed the persistence diagram into the domain
     for(int i=0; i<criticalPointsCellDimension.size(); i++){
@@ -132,7 +132,7 @@ void ttkFG_PersistentHomology::outPersistencePairs(vtkDataArray *inputScalarFiel
 
     vtkSmartPointer<vtkDoubleArray> filtration=vtkSmartPointer<vtkDoubleArray>::New();
     filtration->SetNumberOfComponents(1);
-    filtration->SetName("Filtration");
+    filtration->SetName("Persistence");
 
     vtkSmartPointer<vtkDoubleArray> pairtype=vtkSmartPointer<vtkDoubleArray>::New();
     pairtype->SetNumberOfComponents(1);

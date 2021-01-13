@@ -75,7 +75,9 @@ Here we describe how to interact with the user interface in Paraview in order to
 
 ![interface](https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/outputs.jpg)
 
-`FG_PersistentHomology` produces seven outputs. If you are not familiar with persistent homology, we suggest reading our [paper]() before continuing reading. The outputs produced by the plugin are:
+`FG_PersistentHomology` produces seven outputs. If you are not familiar with persistent homology, we suggest reading our [paper]() or alternative introductory papers before continuing. 
+
+The output produced by the plugin is composed by:
 
 - `Persistence Pairs` are the persistence pairs embedded in the domain of the input scalar field. Each pair is visualized with a line connecting a pair of points. The points correspond to the simplices creating and destroying a homology class. Each point is characterized by a `filtration value` and a `CelDimension` indicating the corresponding simplex dimension. Each line is characterized by a `filtration value` and a `type` indicating the homology class's dimension.
 
@@ -99,4 +101,94 @@ Here we describe how to interact with the user interface in Paraview in order to
 
 Extraction of 1-cycles/2-cycles and 1-holes/2-holes is disabled by default and can be activated from the properties panel by clicking on the corresponding checkbox.
 
-The user can also limit the extraction of persistence pairs, cycles, and holes only to homology classes with a certain lifespan. This is achieved by setting the interval of normalized persistence of interest (`Min Persistence`, `Max persistence`).
+The user can also limit the extraction of persistence pairs, cycles, and holes only to homology classes with a certain persistence. This is done by specifying the interval of normalized persistence of interest (`Min Persistence`, `Max persistence`).
+
+
+
+## Reading Persistence Cycles and Persistence pairs in Python
+
+Once computed, you can export persistence cycles and persistence pairs with the command `Save Geometry` in Paraview. After that, you will obtain `vtk` files that can be imported, for example, into a python script. You will simply need a python library capable of reading vtk files (I like to use [meshio](https://pypi.org/project/meshio/)). Suppose you computed persistence 2-cycles and persistence pairs saving them into two files `2-cycles.vtk` and `ppairs.vtk`, all we have to do is
+
+
+```python
+import meshio
+pairs = meshio.read("ppairs.vtk")
+```
+
+if you take a look at what `pairs` contains
+
+```
+<meshio mesh object>
+  Number of points: 802
+  Number of cells:
+    line: 401
+  Point data: CellDimension, Filtration%20value%20vertex
+  Cell data: Filtration, Type
+```
+
+We recall that persitence pairs are plotted as lines connecting the centroids of the simplices responsible for creating and destroying an homology class.
+For each point we have two scalar fields:
+- `CellDimension` indicate the dimension of the corresponding simplex (0,1,2, or 3)
+- `Filtration` indicate the filtration value
+
+For each line we also have two scalar fields
+- `Persistence` indicate the persistence value associated to such pair
+- `Type` indicate the type of the pair (0,1,2)
+
+The same thing can be done for reading persistence cycles
+
+```python
+import meshio
+data = meshio.read("2-cycles.vtk")
+```
+
+```
+<meshio mesh object>
+  Number of points: 3469
+  Number of cells:
+    triangle: 8208
+  Cell data: CycleId, Filtration
+```
+
+
+We recall that 2-cycles are formed by triangles. For triangle we have two scalar fields:
+- `CycleId` this is a unique id for identifying the cycle. In practice, triangles having the same value of `CycleId`, belong to the same cycle. Moreover, the `CycleID` indicate the persistence pair corresponding to the cycle. To retrieve the pair we need a little extra work.
+
+First, persistence pairs are ordered according to their type, so first thing we need to find where persistence pairs of type 2 start.
+
+```python
+    position_pairs2=0
+    for i in range(0,len(ppairs.cell_data['Type'])):
+        if ppairs.cell_data['Type'][0][i] == 2:
+            position_pairs2 = i
+```
+
+Then, supposing the `CycleId` we were searching for had value `id`, the corresponding pair is simlpy retrieved with the following command
+
+    ```python
+        pairs.cells[0].data[position_pairs2 + idn]
+    ```
+
+- `Filtration` indicate the filtration value (the time at which the triangle has been introduced)
+
+
+Notice that the persistence pairs we are using here are embedded in the original domain space. However, we have all the necessary to retrieve the persistence pairs embedded in the space of the persistence diagram. We can simply run
+
+```python
+
+pers_diag = []
+
+for line in ppairs.cells[0].data:
+    v0 = line[0]
+    v1 = line[1]
+    
+    f0 = ppairs.point_data["Filtration"][v0]
+    f1 = ppairs.point_data["Filtration"][v1]
+    pers_diag.append([f0,f1])
+
+```
+
+which will produce pairs with which creating a classic persistence diagram
+
+
+<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pd_example.jpg" alt="drawing" height="80"/>
