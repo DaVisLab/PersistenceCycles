@@ -8,7 +8,7 @@ The main objective of this tool is computing and visualizing an explicit represe
 
 The algorithm (described in our [TVCG paper](http://fiurici.people.clemson.edu/papers/tvcg2021-2.pdf)) is implemented as a module for the [Topology ToolKit](https://topology-tool-kit.github.io).
 
-<img src="figures/pd_full.jpg" alt="drawing" height="100"/> <img src="figures/pairs_1perc.jpg" alt="drawing" height="100"/> <img src="figures/cycles.jpg" alt="drawing" height="100"/> <img src="figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="100"/> <img src="figures/full2-cycles-1perc.jpg" alt="drawing" height="100"/>
+<img src="figures/pd_full.jpg" alt="drawing" height="100"/> <img src="figures/pairs_1perc.jpg" alt="drawing" height="100"/> <img src="figures/cycles.jpg" alt="drawing" height="100"/> <img src="figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="100"/>
 
 
 ## Installation
@@ -73,7 +73,7 @@ Here we describe how to interact with the user interface in Paraview in order to
 
 #### Output
 
-![interface](https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/outputs.jpg)
+![interface](figures/outputs.jpg)
 
 `FG_PersistentHomology` produces seven outputs. If you are not familiar with persistent homology, we suggest reading our [paper]() or alternative introductory papers before continuing. 
 
