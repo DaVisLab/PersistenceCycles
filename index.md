@@ -8,7 +8,7 @@ The main objective of this tool is computing and visualizing an explicit represe
 
 The algorithm (described in our [TVCG paper](http://fiurici.people.clemson.edu/papers/tvcg2021-2.pdf)) is implemented as a module for the [Topology ToolKit](https://topology-tool-kit.github.io).
 
-<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pd_full.jpg" alt="drawing" height="120"/> <img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pairs_1perc.jpg" alt="drawing" height="120"/> <img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/cycles.jpg" alt="drawing" height="120"/> <img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="120"/> <img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/full2-cycles-1perc.jpg" alt="drawing" height="120"/>
+<img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/pd_full.jpg" alt="drawing" height="120"/> <img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/pairs_1perc.jpg" alt="drawing" height="120"/> <img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/cycles.jpg" alt="drawing" height="120"/> <img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="120"/> <img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/full2-cycles-1perc.jpg" alt="drawing" height="120"/>
 
 
 ## Installation
@@ -191,6 +191,6 @@ for line in ppairs.cells[0].data:
 which will produce pairs with which creating a classic persistence diagram
 
 
-<img src="https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/pd_example.jpg" alt="drawing" height="120"/>
+<img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/pd_example.jpg" alt="drawing" height="120"/>
 
 
