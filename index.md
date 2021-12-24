@@ -8,7 +8,7 @@ The main objective of this tool is computing and visualizing an explicit represe
 
 The algorithm (described in our [TVCG paper](http://fiurici.people.clemson.edu/papers/tvcg2021-2.pdf)) is implemented as a module for the [Topology ToolKit](https://topology-tool-kit.github.io).
 
-<img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/pd_full.jpg" alt="drawing" height="120"/> <img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/pairs_1perc.jpg" alt="drawing" height="120"/> <img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/cycles.jpg" alt="drawing" height="120"/> <img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="120"/> <img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/full2-cycles-1perc.jpg" alt="drawing" height="120"/>
+<img src="figures/pd_full.jpg" alt="drawing" height="100"/> <img src="figures/pairs_1perc.jpg" alt="drawing" height="100"/> <img src="figures/cycles.jpg" alt="drawing" height="100"/> <img src="figures/first_hurricane_cycles_zoom.jpg" alt="drawing" height="100"/> <img src="figures/full2-cycles-1perc.jpg" alt="drawing" height="100"/>
 
 
 ## Installation
@@ -97,7 +97,7 @@ The output produced by the plugin is composed by:
 
 #### Interface
 
-![interface](https://github.com/IuricichF/PersistenceCycles/blob/figures/figures/interface.jpg)
+![interface](figures/interface.jpg)
 
 Extraction of 1-cycles/2-cycles and 1-holes/2-holes is disabled by default and can be activated from the properties panel by clicking on the corresponding checkbox.
 
@@ -191,6 +191,4 @@ for line in ppairs.cells[0].data:
 which will produce pairs with which creating a classic persistence diagram
 
 
-<img src="https://github.com/DaVisLab/PersistenceCycles/blob/figures/figures/pd_example.jpg" alt="drawing" height="120"/>
-
-
+<img src="figures/pd_example.jpg" alt="drawing" height="120"/>
